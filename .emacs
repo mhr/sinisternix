@@ -81,6 +81,9 @@
 			   "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+;; theme
 ; (load-theme 'solarized-dark t)
 (load-theme 'monokai t)
 
+;; word-wrapping - visual line mode
+(setq line-move-visual t)
