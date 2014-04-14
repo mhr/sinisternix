@@ -1,10 +1,3 @@
-# path to zsh
-export ZSH=$HOME
-
-plugins=(git)
-
-source $ZSH
-
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
