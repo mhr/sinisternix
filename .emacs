@@ -15,7 +15,6 @@
 (global-linum-mode t)
 
 ;; esc quits...vi
-
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
@@ -87,3 +86,12 @@
 
 ;; word-wrapping - visual line mode
 (setq line-move-visual t)
+
+;; I hate backup files, I have git
+(setq make-backup-files nil)
+(setq backup-directory-alist `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+
+
+;; y or n
+(defalias 'yes-or-no-p 'y-or-n-p)
