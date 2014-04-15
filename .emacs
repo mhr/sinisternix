@@ -8,7 +8,6 @@
 (require 'undo-tree)
 (global-undo-tree-mode 1)
 
-;;; top-level settings
 ;; Visual Line mode (line wrapping by word)
 (global-visual-line-mode t)
 
