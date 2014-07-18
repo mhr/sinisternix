@@ -137,5 +137,11 @@
 (autoload 'extempore-mode "~/.linuxbrew/Cellar/extempore/0.5/extras/extempore.el" "" t)
 (add-to-list 'auto-mode-alist '("\\.xtm$" . extempore-mode))
 
-;; keep cursor in place when scrolling
-(setq scroll-preserve-screen-position t)
+;; show column with row number when showing cursor position
+(column-number-mode t)
+
+;; smooth scrolling
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ; one line at a time
+(setq mouse-wheel-progressive-speed nil) ; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ; scroll window under mouse
+(setq scroll-step 1) ; keyboard scroll one line at a time
